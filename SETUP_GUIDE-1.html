@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دليل تثبيت Saja FQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Tajawal',sans-serif;background:#FDFAF4;color:#2C1A0E;direction:rtl;padding:24px;max-width:700px;margin:0 auto;line-height:1.7}
+h1{font-size:26px;font-weight:900;color:#A07830;margin-bottom:8px}
+h2{font-size:18px;font-weight:800;color:#2C1A0E;margin:24px 0 10px;padding-right:12px;border-right:4px solid #C9A84C}
+.step{background:#fff;border:1px solid #EAD9B8;border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.step-num{display:inline-flex;width:28px;height:28px;background:#C9A84C;color:#fff;border-radius:50%;align-items:center;justify-content:center;font-weight:800;font-size:13px;margin-left:8px;flex-shrink:0}
+.note{background:#FEF9E7;border:1px solid #FAD7A0;border-radius:10px;padding:12px 16px;color:#876600;font-size:13px;margin-top:10px}
+.ok{background:#EAFAF1;border:1px solid #A9DFBF;border-radius:10px;padding:12px 16px;color:#1A6628;font-size:13px;margin-top:10px}
+code{background:#F5EDD8;padding:2px 8px;border-radius:5px;font-size:13px;direction:ltr;display:inline-block}
+a{color:#A07830;font-weight:700}
+.devices{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.dv{background:#fff;border:1px solid #EAD9B8;border-radius:12px;padding:14px 18px;flex:1;min-width:140px;text-align:center}
+.dv span{font-size:30px;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<h1>🏇 دليل تثبيت Saja FQ</h1>
+<p style="color:#8B6040;font-size:14px">نظام إدارة الإسطبل المتكامل</p>
+
+<div class="devices">
+  <div class="dv"><span>📱</span>iPhone / iPad</div>
+  <div class="dv"><span>🤖</span>Android</div>
+  <div class="dv"><span>💻</span>MacBook</div>
+  <div class="dv"><span>🖥️</span>Windows</div>
+</div>
+
+<h2>الطريقة الأولى: نشر على الإنترنت (الأفضل)</h2>
+<div class="step"><span class="step-num">1</span> اذهب إلى <a href="https://netlify.com" target="_blank">netlify.com</a> وسجّل دخول مجاني</div>
+<div class="step"><span class="step-num">2</span> اضغط <strong>Add new site → Deploy manually</strong></div>
+<div class="step"><span class="step-num">3</span> اسحب مجلد الملفات كاملاً (index.html + sw.js + manifest.json + icons) إلى Netlify</div>
+<div class="step"><span class="step-num">4</span> ستحصل على رابط مثل: <code>saja-fq.netlify.app</code></div>
+<div class="ok">✅ بعد النشر يمكن لأي جهاز فتحه وتثبيته كتطبيق</div>
+
+<h2>التثبيت على iPhone / iPad</h2>
+<div class="step"><span class="step-num">1</span> افتح الرابط في Safari (مهم - ليس Chrome)</div>
+<div class="step"><span class="step-num">2</span> اضغط أيقونة المشاركة ⬆️ أسفل الشاشة</div>
+<div class="step"><span class="step-num">3</span> اختر <strong>"إضافة إلى الشاشة الرئيسية"</strong></div>
+<div class="step"><span class="step-num">4</span> اضغط <strong>إضافة</strong> - سيظهر كتطبيق أصلي 🏇</div>
+
+<h2>التثبيت على Android</h2>
+<div class="step"><span class="step-num">1</span> افتح الرابط في Chrome</div>
+<div class="step"><span class="step-num">2</span> ستظهر رسالة تلقائية "تثبيت التطبيق" - اضغط تثبيت</div>
+<div class="step"><span class="step-num">3</span> أو اضغط القائمة ⋮ ← "إضافة إلى الشاشة الرئيسية"</div>
+
+<h2>التثبيت على MacBook / Windows</h2>
+<div class="step"><span class="step-num">1</span> افتح الرابط في Chrome أو Edge</div>
+<div class="step"><span class="step-num">2</span> في شريط العنوان ستجد أيقونة تثبيت ⊕</div>
+<div class="step"><span class="step-num">3</span> اضغط عليها واختر <strong>تثبيت</strong></div>
+
+<h2>🔥 تفعيل المزامنة بين الأجهزة (Firebase)</h2>
+<div class="step"><span class="step-num">1</span> اذهب إلى <a href="https://console.firebase.google.com" target="_blank">console.firebase.google.com</a></div>
+<div class="step"><span class="step-num">2</span> أنشئ مشروعاً جديداً (الخطة المجانية تكفي)</div>
+<div class="step"><span class="step-num">3</span> فعّل <strong>Realtime Database</strong> واختر وضع Test Mode</div>
+<div class="step"><span class="step-num">4</span> من Project Settings انسخ <strong>Firebase Config</strong></div>
+<div class="step"><span class="step-num">5</span> افتح <code>index.html</code> وابحث عن <code>FB_CFG</code> واستبدل القيم</div>
+<div class="ok">✅ بعد ذلك كل تعديل يتزامن فورياً بين جميع الأجهزة في الوقت الفعلي</div>
+
+<div class="note" style="margin-top:20px">⚠️ بدون Firebase: النظام يعمل بشكل كامل على كل جهاز بشكل مستقل. البيانات محفوظة على الجهاز نفسه فقط.</div>
+</body>
+</html>
